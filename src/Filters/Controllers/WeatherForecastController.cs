@@ -11,7 +11,8 @@ namespace MetanitCourse.Controllers
 {
     [ApiController]
     [LastVisitFilterAsync]
-    [LastVisit]
+    //[ServiceFilter(typeof(LastVisit))]
+    [TypeFilter(typeof(LastVisit), Arguments = new object[] { 2 })]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
