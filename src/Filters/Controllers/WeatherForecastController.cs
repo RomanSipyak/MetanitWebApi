@@ -14,6 +14,8 @@ namespace MetanitCourse.Controllers
     //[ServiceFilter(typeof(LastVisit))]
     [TypeFilter(typeof(LastVisit), Arguments = new object[] { 2 })]
     [Route("[controller]")]
+    [DeprecatedBrouserFilterAsync]
+    [DeprecatedBrouserFilter]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
